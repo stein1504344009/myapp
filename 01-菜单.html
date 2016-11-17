@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello angular</title>
+    <script type="text/javascript" src="../../js/angular.min.js"></script>
+    <style>
+    	ul,li,h2{
+    		margin: 0;
+    		padding: 0;
+    		list-style: none;
+    	}
+    	.menu{
+    		background: #61a1bc;
+    		width: 300px;
+    		padding: 40px 50px 50px;	
+    		color: #fff;
+    		font-size: 14px;
+    		margin: 150px auto;
+    		font-family:"微软雅黑";
+    	}
+    	.menu h2 {
+    		font-size: 24px;
+    		text-align: center;
+    		margin-bottom: 20px;
+    	}
+    	.menu li {
+    		padding: 10px 20px;
+    		background: #e35885;
+    		overflow: hidden;
+    		margin-bottom: 5px;
+    	}
+    	.menu li .l {
+    		float: left;
+    	}
+    	.menu li .r{
+    		float:right;
+    	}
+    	.menu li:first-child{
+    		background: #8ec16d;
+    	}
+    	.menu li input {
+    		width: 50px;
+    		text-align: center;
+    		border: 0;
+    		background: none;
+    		color: #fff;
+    	}
+    	.total{
+    		border-top: 1px solid #fff;
+    		padding-top: 10px;
+    		overflow: hidden;
+    		margin-top:10px;
+    	}
+    	.total .l{
+    		float:left;
+    	}
+    	.total .r{
+    		float:right;
+    	}
+    	.btn{
+    		width: 100%;
+    		text-align: center;
+    		background: #f00;
+    		margin-top: 20px;
+    		height: 40px;
+    		font-size: 18px;
+    		color: #fff;
+    		border: 0;
+    		font-family:"微软雅黑";
+    	}
+    </style>
+</head>
+<body ng-app="myApp">
+	
+	<div class="menu" ng-controller="menuController">
+		<h2>菜单</h2>
+		<ul>
+			<li>
+				<span class="l" >猪肉炖粉条</span>
+				<span class="r"><input type="number" ng-model="price1"></span>
+			</li>
+			<li>
+				<span class="l">小鸡炖蘑菇</span>
+				<span class="r"><input type="number" ng-model="price2"></span>
+			</li>
+			<li>
+				<span class="l">东北乱炖</span>
+				<span class="r"><input type="number" ng-model="price3"></span>
+			</li>
+		</ul>
+		<div class="total"><span class="l">总价</span><span class="r">{{total()}}</span></div>
+	</div>
+	
+	<script>
+		var app = angular.module('myApp', []);
+		
+		app.controller('menuController', function($scope) {
+			$scope.price1 = 100;
+			$scope.price2 = 150;
+			$scope.price3 = 200;
+			
+			$scope.total = function () {
+				return this.price1 + this.price2 + this.price3;
+			}
+		})
+	</script>
+   
+</body>
+
+</html>
+
