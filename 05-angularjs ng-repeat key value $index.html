@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ng-repeat</title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+
+</head>
+<body ng-app="myApp">
+
+<!--
+
+ng-repeat  循环数据
+<li ng-repeat="i in list">{{i.name}}--{{i.age}}</li>
+
+
+i表示每一项 名字随意
+list表示数据   名字必须和scope上面绑定的一致
+
+
+
+<li ng-repeat="(key,item) in list">{{key}}--{{item.name}}--{{item.age}}</li>
+
+(key,item)   key索引值   item表示每一项
+
+
+
+ ng-if   true的话显示
+
+
+-->
+        <div ng-controller="firstController">
+
+            <!-- 数组循环 -->
+            <ul>
+                <li ng-repeat="val in list1">
+                    {{val}}
+                </li>
+            </ul>
+            <hr>
+            
+             <!--对象循环--> 
+            <ul>
+                <li ng-repeat="(key, val) in list2">{{key}}--{{val}}</li>
+            </ul>
+            <hr>
+            
+             <!--数组对象循环--> 
+            <ul>
+                <li ng-repeat="(key, item) in list3">{{key}}--{{item.name}}--{{item.age}}</li>
+            </ul>
+            <hr>
+
+            <ul>
+                <li ng-repeat="(key, item) in list3" ng-if="key < 2">
+                    {{key}}--{{item.name}}--{{item.age}}
+                </li>
+            </ul>
+            <hr/>
+
+            <!--$index  也是索引值-->
+            <ul>
+                <li ng-repeat="(key, item) in list3">
+                   {{$index}}----{{key}}--{{item.name}}--{{item.age}}
+                </li>
+            </ul>
+            <hr>
+            
+            <ul>
+                <li ng-repeat="item in list3">
+                    {{$first}}----{{$index}}----{{item.name}}--{{item.age}}
+                </li>
+            </ul>
+
+        </div>
+</body>
+</html>
+<script>
+    var app=angular.module('myApp',[]);
+
+
+    app.controller('firstController',function($scope){
+
+        $scope.list1 = ['张三','李四', '王五'];
+
+        $scope.list2 = {'name':'王五',age:'20',sex:'男'};
+
+        $scope.list3 = [
+            {'name':'张三',age:'20'}, 
+            {'name':'李四1',age:'20'}, 
+            {'name':'李四2',age:'20'}, 
+            {'name':'李四3',age:'20'}, 
+            {'name':'王五',age:'22'}  
+        ];
+
+    })
+</script>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello angular</title>
+    <!--<script type="text/javascript" src="../js/jquery-1.12.0.js"></script>-->
+    <script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+	
+	<!--<div id="firstController">
+   		<span class="name"></span><br>
+   		<span class="person-name"></span>
+   	</div>-->
+
+   	<!--<div ng-controller="firstController">  
+        {{name}}<br>
+
+        {{person.name}}
+   	</div>-->
+   	<hr>
+
+
+   	
+   	<!--<div ng-controller="secondController">
+   		姓：<input type="text" ng-model="person.firstName"><br><br>
+   		名：<input type="text" ng-model="person.lastName"><br><br>
+   		
+		  姓名：{{person.fullName()}}
+   	</div>-->
+   	<div id="" ng-controller="qq">
+   		<input type="text" ng-model="name1" name="" id="" value="" />
+   		<input type="text" ng-model="name2" name="" id="" value="" />
+   		<p ng-init="name3"></p>
+   		
+   	</div>
+   	<script type="text/javascript">
+   		var app=angular.module("myApp",[]);
+   		app.controller("qq",function($scope){
+   			$scope.name1="liu";
+   			$scope.name2="stein";
+   			$scope.name3= $scope.name2+"."+$scope.name1;
+   		})
+   	</script>
+</body>
+
+</html>
+
+<script>
+
+//$(function () {
+//	var name='张三';
+//	var person = {
+//		name: '李四',
+//		age: 30
+//	}
+	
+//	$('.name').html(name);
+//	$('.person-name').html(person.name);
+
+//  $scope  是控制器和view之间的桥梁
+// function firstController($scope){
+//
+//  $scope.name='张三';
+//
+//  $scope.person={
+//      name: '啊三'
+//  }
+//
+// }
+//
+//	function secondController($scope) {
+//		
+//		$scope.person = {
+//			firstName: '王',
+//			lastName: '宝强',
+//			fullName: function () {
+//				return this.firstName + this.lastName;
+//			}
+//		}
+//
+//	}
+	
+//  angular-1.3.0.js 支持这样的写法 现在已经不支持了
+//  控制器污染了全局命名空间
+
+	/*实现 ng-app里面定义的  myApp
+   *
+   * 两个参数
+   * 1.ng-app里面定义的  myApp
+   * 2. 默认[]   表示依赖哪些   module
+   *
+   */
+	
+	/*
+   * 两个参数   
+   * 1.第一个参数 是ng-controller上面定义的名字   ng-controller="secondController"
+   * 2.方法    绑定数据  依赖注入 $scope
+   * $scope  控制器 和视图直接的桥梁
+   */
+
+//  var app = angular.module('myApp',[]);
+//  
+//  app.controller('secondController', function ($scope) {   // $scope这个控制器里面所有变量的集合, $scope相当于object {}
+//  	
+//  	$scope.person = {
+//			firstName: '王',
+//			lastName: '宝强',
+//			fullName: function () {
+//				return this.firstName + this.lastName;
+//			}
+//		}
+//  	
+//  })
+
+</script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ng-repeat</title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+
+</head>
+<body ng-app="myApp">
+
+<!--
+
+ng-repeat  循环数据
+<li ng-repeat="i in list">{{i.name}}--{{i.age}}</li>
+
+
+i表示每一项 名字随意
+list表示数据   名字必须和scope上面绑定的一致
+
+-->
+        <div ng-controller="firstController">
+                <!--<ul>
+                    <li ng-repeat="i in list">{{i.name}} -- {{i.age}}</li>
+                </ul>
+
+            <hr/>-->
+
+
+            <ul>
+                <li ng-repeat='item in list_result.result'>{{item.name}} -- {{item.age}}</li>
+            </ul>
+        </div>
+</body>
+</html>
+<script>
+    var app=angular.module('myApp',[]);
+
+
+    app.controller('firstController',function($scope){
+
+//      $scope.list=[
+//          {'name':'张三',age:'20'},
+//          {'name':'李四',age:'20'},
+//          {'name':'王五',age:'22'},
+//      ];
+
+        $scope.list_result={
+        	'name': '宝宝',
+        	'result':[
+                {'name':'张三111',age:'20'},
+                {'name':'李四111',age:'20'},
+                {'name':'王五111',age:'22'},
+            ]};
+
+    })
+</script>
