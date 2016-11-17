@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="css/swiper.min.css" />
+	<body>
+		 <div class="swiper-container swiper-container-h">
+        <div class="swiper-wrapper">
+	            <div class="swiper-slide">Horizontal Slide 1</div>
+	            <div class="swiper-slide">
+	                <div class="swiper-container swiper-container-v">
+	                    <div class="swiper-wrapper">
+	                        <div class="swiper-slide">Vertical Slide 1</div>
+	                        <div class="swiper-slide">Vertical Slide 2</div>
+	                        <div class="swiper-slide">Vertical Slide 3</div>
+	                        <div class="swiper-slide">Vertical Slide 4</div>
+	                        <div class="swiper-slide">Vertical Slide 5</div>
+	                    </div>
+	                    <div class="swiper-pagination swiper-pagination-v"></div>
+	                </div>
+	            </div>
+	            <div class="swiper-slide">Horizontal Slide 3</div>
+	            <div class="swiper-slide">Horizontal Slide 4</div>
+	        </div>
+	        <!-- Add Pagination -->
+	        <div class="swiper-pagination swiper-pagination-h"></div>
+	    </div>
+	</body>
+	<script src="js/swiper.min.js" type="text/javascript">
+		
+	</script>
+	<script>
+    var swiperH = new Swiper('.swiper-container-h', {
+        pagination: '.swiper-pagination-h',
+        paginationClickable: true,
+        spaceBetween: 50
+    });
+    var swiperV = new Swiper('.swiper-container-v', {
+        pagination: '.swiper-pagination-v',
+        paginationClickable: true,
+        direction: 'vertical',
+        spaceBetween: 50
+    });
+    </script>
+</html>

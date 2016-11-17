@@ -1,0 +1,531 @@
+ *{
+     margin: 0;
+     padding: 0;
+ }
+ ul{list-style: none;
+ margin: 0;
+ padding: 0;}
+ 
+ a{
+     text-decoration: none;
+ }
+     html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+ @media  (max-width:339px ) {
+            html{
+                background: black;
+                font-size: 5px;
+            }
+            .mnb-right h4{
+                transform: scale(0.9) translateX(0.2rem);
+            }
+            .mnb-right p{
+                transform: scale(0.95) translateX(0.2rem);
+            }
+            .mnb-right span{
+                transform: scale(0.85) translateX(0.4rem);
+            }
+//          .search{
+//              width: 65%;
+//          }
+            
+        }
+ @media (min-width:340px) and (max-width:667px ) {
+            html{
+               
+                font-size: 10px;
+            }
+        }
+ @media (min-width:667px) and (max-width:1100px ) {
+            html{
+                
+                font-size: 16px;
+            }
+        }
+ @media (min-width:1100px ) {
+            html{
+              
+                font-size: 24px;
+            }
+            .index i{
+                font-size: 0.9rem!important;
+            }
+        }
+ .content{
+       
+        width: 100%;
+        height: 100%;
+        header{
+            text-align: center;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: #06c1ae;
+            .my{
+                .iconfont{
+                     color: white;
+                      font-size:1.5rem;
+                      font-weight: bolder;
+                 }
+                text-decoration: none;
+                   color: white;
+                   display: block;
+                   flex: 1.1;
+                    font-size: 0.6rem;
+                    
+            }
+            .address{
+               
+                   text-decoration: none;
+                   color: white;
+                   display: block;
+                   flex: 1.6;
+                   line-height: 2.5rem;
+                    font-size: 1.2rem;
+                    span{
+                        transform: rotate(45deg);
+                        display:inline-block;
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        transform-origin:70%;
+                        border-bottom: white solid 1px;
+                        border-right: 1px solid white;
+                        &:hover{
+                            transform: rotate(-135deg);
+                            transition: all 0.5s;
+                        }
+                   }
+                
+            }
+            
+            .search{
+                border-radius: 0.2rem;
+                position: relative;
+                margin: 0.8rem 0;
+                flex: 7;
+                width: 10rem;
+                display: inline-block;
+                 
+                .iconfont{
+                     color: #fff9e4;
+                      font-weight: bolder;
+                     font-size: 0.8rem;
+                 }
+                .btnx{
+                   left: 0;
+                   border-radius: 0.25rem !important;
+                   background: none;
+                   position:absolute ;
+                  line-height: 2.5rem;
+                   border:none;
+                   height: 2.5rem;
+                   width: 2.5rem;
+                   
+                }
+                .sou{
+                    border: none;
+                    border-radius: 0.25rem;
+                    background: #05a494;
+                    box-sizing: border-box;
+                    width: 100%;
+                    line-height: 2.5rem;
+                    height:2.5rem;
+                    padding-left: 2.5rem;
+                    color: white;
+                }
+            }
+        }
+   
+      .index{
+            
+            width: 100%;
+            height: 20rem;
+            display:flex;
+           
+           .indexContent{
+               display: block;
+                width:100%;
+                height:100%;
+                ul:nth-child(2){
+                    a{
+                        &:nth-child(1){
+                              span{
+                                    background: blueviolet;
+                              }
+                         
+                           }
+                           &:nth-child(2){
+                                span{
+                                    background: palegreen;
+                              }
+                           }
+                            &:nth-child(3){
+                               span{
+                                    background: darkblue;
+                              }
+                           }
+                            &:nth-child(4){
+                                span{
+                                    background: indianred;
+                              }
+                           }
+                            &:nth-child(5){
+                                span{
+                                    background: mediumaquamarine;
+                              }
+                           }
+                    }
+                }  
+                ul{
+                  height: 40%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-around;
+                   a{  
+                          text-align:center; 
+                        &:nth-child(1){
+                              span{
+                                    background: blueviolet;
+                              }
+                         
+                           }
+                           &:nth-child(2){
+                                span{
+                                    background: pink;
+                              }
+                           }
+                            &:nth-child(3){
+                               span{
+                                    background: greenyellow;
+                              }
+                           }
+                            &:nth-child(4){
+                                span{
+                                    background: yellow;
+                              }
+                           }
+                            &:nth-child(5){
+                                span{
+                                    background: black;
+                              }
+                           }
+                       text-align:center;
+                       text-decoration: none;
+                       display: block;
+                       width: 7rem;
+                       i{
+                               text-align: center;
+                                font-size: .24rem;
+                                color: #666;
+                                font-style: normal;
+                       }
+                       span{
+                         margin: 0.3rem auto;
+                           display: block;
+                           font-size: 2rem;
+                           height: 4rem;
+                           width: 4rem;
+                           line-height: 4rem;
+                            border-radius: 2rem;
+                            background: red;
+                           color: white;
+                       }
+                      
+                    }
+              }
+           }
+        } 
+        
+        
+        
+        .biaopai{
+            text-align: center;
+            width: 100%;
+            background: white;
+            margin: 1.1rem 0;   
+            display: flex;
+            p{
+                color: #666666;
+            }
+            div{
+                border: 1px solid gainsboro;
+                img{
+                     vertical-align: middle;
+                     height: 100%;
+                }
+            }
+            
+            .left{
+                align-items: center;
+                flex: 0.9;
+                align-items: center;
+                flex-direction: column;
+                a{
+                    margin-top: 2.2rem;
+                    display: block;
+                    height: 2rem;
+                    line-height: 2rem;
+                    h4{
+                        color: red;
+                        line-height: 1rem;
+                    }
+                }
+                img{
+                    height: 8rem;
+                }
+            } 
+             .right{
+                flex: 1.1;
+                flex-direction: column;
+                display: flex;
+                .left-a{
+                    margin-top: 1rem;
+                }
+                .right-top{
+                    width: 100%;
+                    height: 50%;
+                    a{
+                        padding-top:0.2rem ;
+                        width: 14rem;
+                        display:inline-block;
+                    
+                    h4{
+                        color: saddlebrown;
+                    }
+                    }
+                    img{
+                        height: 5rem;
+                    }
+                }
+               .right_bottom{
+                    display: flex;
+                    width: 100%;
+                    height: 50%;
+                    flex-direction: row;
+                   
+                    .right_bottom_left{
+                         a{
+                             font-size:0.4;
+                             padding-top:0.7rem ;
+                            width: 3rem;
+                            display:inline-block;
+                                h4{
+                                    color: #149BDF;
+                                }
+                               
+                            }
+                         img{   
+                                margin-left:0.2rem;
+                                width: 3rem;
+                                }
+                            flex: 1;
+                    }
+                    .right_bottom_right{
+                        flex: 1;
+                        position: relative;
+                        .timeHeader{
+                             font-size:0.4;
+                             padding-top:0.7rem ;
+                            display:inline-block;
+                                h4{
+                                    color: yellow;
+                                }
+                            margin-top: 0.5rem;
+                            margin-left: -1rem;
+                            width: 5rem;
+                        }
+                        .timer{
+                            margin: auto;
+                            border:none;
+                            width: 5rem;
+                            display: flex;
+                            justify-content: space-around;
+                            p{
+                                width: 1.2rem;
+                                height: 1.2rem;
+                                line-height: 1.2rem;
+                                text-align: center;
+                                font-size: 0.55rem;
+                                border-radius: 0.3rem;
+                                color: white;
+                                background: darkslategrey;
+                            }
+                        }
+                    }
+               }
+            }      
+        }
+
+       .shoop_content{
+           padding: 0 1rem;
+           background: white;
+           border: 1px solid darkgray;
+           .shoop-header{
+               height: 4rem;
+               line-height: 4rem;
+               font-size: 1.3rem;
+              
+           }
+           .mnb{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap:wrap ;
+                flex-direction: column;
+               
+               h1{
+                   text-align: center;
+               }
+               
+               li{
+                   overflow: hidden;
+                  display: flex;
+                  padding: 0.5rem;
+                   background: white;
+                   border: 1px solid gainsboro;
+                   border-right: none;
+                   border-left: none;
+                  
+                   img{
+                       flex: 1;
+                       height: 6rem;
+                       width:  6rem;
+                       display: block;
+                       
+                   }
+                   .mnb-right{
+                       position: relative;
+                       padding-left: 1rem;
+                       flex-direction: column;
+                       flex: 4;
+                       .x{
+                                font-size: 0.9rem;
+                                color: #666;
+                                position: absolute;
+                                right: 0;
+                                bottom: 0.4rem;
+                                
+                             }
+                     p{
+                         position: absolute;
+                         bottom: 0;
+                         display: block;
+                         font-size: 1.7rem;
+                         color: #06C1AE;
+                         overflow: hidden;
+                         span{
+                             border: 1px solid orange;
+                             height: 1.4rem;
+                             padding: 0 0.3rem;
+                             line-height: 1.5rem;
+                             border-radius: 0.2rem;margin-left:0.8rem ;
+                             display: inline-block;
+                             font-size: 1rem;
+                              color: orange;
+                             
+                         }
+                        
+                        
+                     }
+                     .mnb-head{
+                         display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+                         align-self: flex-end;
+                         display: block;
+                         font-size: 1.1;
+                         color: gray;
+                         width: 15rem;
+                           margin-top:0;                        
+                     }
+                   }
+               }
+               
+           }  
+       }
+       
+       
+       
+       
+       footer{
+           text-align: center;
+           padding-top: 2rem;
+           padding: 3rem 0;
+           margin-top: 0rem;
+           background: white;
+          
+          .yongHu{
+              text-align: left;
+              padding: 0.5rem;
+               overflow: hidden;
+               a{
+                   padding: 0.3rem 0.5rem;
+                   border-radius: 0.2rem;
+                   border: 1px solid #4BB1CF;
+                   color:#4BB1CF ;
+                  
+               }
+                span{
+                   display: block;
+                   float: right;
+               }
+          }
+          .footer-nav{
+              padding-top:2.5rem ;
+              display: flex;
+              li{
+                  flex: 1;
+                  border-left: 1px solid #363636;
+                 &:nth-child(1){
+                     border: none;
+                 }
+                  a{
+                      display: block;
+                      color: #4BB1CF;
+                  }
+              }
+          }
+          
+          .youQingLianJie{
+              line-height: 3.5rem;
+              a{
+                  color:#4BB1CF;
+              }
+          }
+          .banHao{
+              color: gray;
+              font-size: 0.7rem;
+          }
+       }
+    }
+    
